@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ExchangeRateFromOpenAPI</title>
+</head>
+<body>
+<h2>ExchangeRateFromOpenAPI</h2>
+<table>
+	<thead>
+        <tr>
+            <th>Date</th>
+            <th>UsdToNtd</th>
+            <th>RmbToNtd</th>
+            <th>UsdToRmb</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="eb,status : ${ebList}">
+            <td th:text="${eb.exchangeDate}">Date</td>
+            <td th:text="${eb.usdToNtd}">UsdToNtd</td>
+            <td th:text="${eb.rmbToNtd}">RmbToNtd</td>
+            <td th:text="${eb.UsdToRmb}">UsdToRmb</td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+</html>

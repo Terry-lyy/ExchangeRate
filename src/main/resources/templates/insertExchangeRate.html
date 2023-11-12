@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>InsertExchangeRate</title>
+</head>
+<body>
+<h2>InsertExchangeRate</h2>
+
+<form action="/insertExchangeRate" method="post" th:action="@{/insertExchangeRate}" th:object="${exchangeBean}">
+
+    <label for="exchangeDate">Date:</label>
+    <input type="text" id="exchangeDate" name="exchangeDate" th:field="*{exchangeDate}" />
+    
+    <label for="usdToNtd">UsdToNtd:</label>
+    <input type="text" id="usdToNtd" name="usdToNtd" th:field="*{usdToNtd}" />
+    
+    <label for="rmbToNtd">RmbToNtd:</label>
+    <input type="text" id="rmbToNtd" name="rmbToNtd" th:field="*{rmbToNtd}" />
+    
+    <label for="usdToRmb">UsdToRmb:</label>
+    <input type="text" id="usdToRmb" name="usdToRmb" th:field="*{usdToRmb}" />
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
